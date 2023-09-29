@@ -30,3 +30,21 @@
  
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+// O(n^2)
+const twoSum = (nums, target) => {
+    let i = 0
+
+    while (i < nums.length - 1) {
+        let j = 1
+
+        while (j < nums.length) {
+            if (nums[i] + nums[j] === target && i !==j) {
+                return [i, j]
+            }
+            j++
+        }
+
+        i++
+    }
+}
