@@ -32,19 +32,47 @@
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
 // O(n^2)
+// const twoSum = (nums, target) => {
+//     let i = 0
+
+//     while (i < nums.length - 1) {
+//         let j = 1
+
+//         while (j < nums.length) {
+//             if (nums[i] + nums[j] === target && i !==j) {
+//                 return [i, j]
+//             }
+//             j++
+//         }
+
+//         i++
+//     }
+// }
+
+// O(n)
+// Hash stores numbers and indexes
 const twoSum = (nums, target) => {
-    let i = 0
+    let numsIdcs = {}
 
-    while (i < nums.length - 1) {
-        let j = 1
+    for (let i = 0; i < nums.length; i++) {
+        const diff = target - nums[i]
+        console.log(numsIdcs)
+        console.log(diff)
 
-        while (j < nums.length) {
-            if (nums[i] + nums[j] === target && i !==j) {
-                return [i, j]
-            }
-            j++
+        // issue here with diff being integer vs string but converting to string doesn't help
+        if (numsIdcs[diff]) {
+            return [numsIdcs[target - nums[i]], i]
         }
-
-        i++
+        else {
+            numsIdcs[nums[i]] = i
+        }
     }
+
+    console.log(numsIdcs)
+    console.log(numsIdcs['7'])
 }
+
+let nums = [2, 7, 11, 15]
+let target = 9
+
+console.log(twoSum(nums, target))
