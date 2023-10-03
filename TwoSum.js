@@ -70,6 +70,7 @@ const twoSum = (nums, target) => {
 
     console.log(numsIdcs)
     console.log(numsIdcs['7'])
+    
 }
 
 let nums = [2, 7, 11, 15]
