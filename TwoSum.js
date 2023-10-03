@@ -70,10 +70,10 @@ const twoSum = (nums, target) => {
 
     console.log(numsIdcs)
     console.log(numsIdcs['7'])
-    
 }
 
 let nums = [2, 7, 11, 15]
 let target = 9
+
 
 console.log(twoSum(nums, target))
