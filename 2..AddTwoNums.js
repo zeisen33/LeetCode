@@ -36,13 +36,14 @@ var addTwoNumbers = function(l1, l2) {
     // console.log(iLen)
     // console.log(jLen)
 
+    //345
     while (i < iLen) {
         sum += l1[i] * 10**(iLen - i - 1)
         i++
     }
 
     while (j < jLen) {
-        sum += l2[j] * 10**(iLen - j - 1)
+        sum += l2[j] * 10**(jLen - j - 1)
         j++
     }
 
@@ -51,7 +52,7 @@ var addTwoNumbers = function(l1, l2) {
     let curr = sum
     let finalAns = []
 
-    console.log(curr)
+    // console.log(curr)
     while (curr > 9) {
         // console.log(`curr: ${curr}`)
         // console.log(`currAns: ${finalAns}`)
