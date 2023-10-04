@@ -31,6 +31,9 @@
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
+
+
+
 // O(n^2)
 // const twoSum = (nums, target) => {
 //     let i = 0
@@ -57,11 +60,12 @@ const twoSum = (nums, target) => {
 
     for (let i = 0; i < nums.length; i++) {
         const diff = target - nums[i]
-        console.log(numsIdcs)
-        console.log(diff)
-
-        // issue here with diff being integer vs string but converting to string doesn't help
-        if (numsIdcs[diff]) {
+        // console.log(`diff: ${diff}`)
+        // console.log(`i: ${i}, numsIdcs[diff]: ${numsIdcs[diff]}`)        
+    
+        // if (numsIdcs[diff]) {          <--- doesn't work because numsIdcs[diff] will always be undefined or 0 which are both falsey
+        if (diff in numsIdcs) {
+            // console.log('hits')
             return [numsIdcs[target - nums[i]], i]
         }
         else {
@@ -69,9 +73,8 @@ const twoSum = (nums, target) => {
         }
     }
 
-
-    console.log(numsIdcs)
-    console.log(numsIdcs['7'])
+    // console.log(numsIdcs)
+    // console.log(numsIdcs['7'])
 }
 
 let nums = [2, 7, 11, 15]
