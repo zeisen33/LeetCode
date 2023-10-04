@@ -33,8 +33,8 @@ var addTwoNumbers = function(l1, l2) {
     let j = 0
     let iLen = l1.length
     let jLen = l2.length
-    console.log(iLen)
-    console.log(jLen)
+    // console.log(iLen)
+    // console.log(jLen)
 
     while (i < iLen) {
         sum += l1[i] * 10**(iLen - i - 1)
@@ -47,12 +47,28 @@ var addTwoNumbers = function(l1, l2) {
     }
 
     // Go from having sum to list
+    // Could do with sum.toString().split('') but I want to practice this way
     let curr = sum
+    let finalAns = []
+
+    console.log(curr)
+    while (curr > 9) {
+        // console.log(`curr: ${curr}`)
+        // console.log(`currAns: ${finalAns}`)
+        // console.log(curr % 10)
+        finalAns.push(curr % 10)
+        // console.log(finalAns)
+        curr = Math.floor(curr / 10)
+        // console.log(curr)
+    }
+
+    // return finalAns.push(curr)  <---- Doesn't work because .push returns length of new array
     
-    
+    finalAns.push(curr)
+    return finalAns
 }
 
-let l1 = [2,4,3]
-let l2 = [5,6,4]
+let l1 = [9,9,9,9,9,9,9]
+let l2 = [9,9,9,9]
 
 console.log(addTwoNumbers(l1, l2))
