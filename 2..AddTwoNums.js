@@ -2,7 +2,6 @@
 
 // You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
- 
 
 // Example 1:
 
@@ -69,7 +68,8 @@ var addTwoNumbers = function(l1, l2) {
     return finalAns
 }
 
-let l1 = [9,9,9,9,9,9,9]
-let l2 = [9,9,9,9]
+
+let l1 = [0]
+let l2 = [0]
 
 console.log(addTwoNumbers(l1, l2))
