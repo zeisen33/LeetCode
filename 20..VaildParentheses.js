@@ -20,13 +20,11 @@ Example 3:
 Input: s = "(]"
 Output: false
  
-
 Constraints:
 
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'. 
 */
-
 
 const isValid = (str) => {
     const len = str.length
@@ -36,5 +34,6 @@ const isValid = (str) => {
     if (len === 0) return true
 
     return 
+    
 }
 
