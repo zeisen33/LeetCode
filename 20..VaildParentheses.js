@@ -35,6 +35,8 @@ const isValid = (str) => {
     if (len === 0) return true
 
     return 
-    
+
 }
+
+// I just had a coding challenge that was very similar to this
 
