@@ -26,6 +26,7 @@ Constraints:
 s consists of parentheses only '()[]{}'. 
 */
 
+
 const isValid = (str) => {
     const len = str.length
 
@@ -36,7 +37,6 @@ const isValid = (str) => {
     return 
 
 }
-
 
 // I just had a coding challenge that was very similar to this
 
